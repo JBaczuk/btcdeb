@@ -491,7 +491,9 @@ bool StepScript(ScriptExecutionEnvironment& env, CScriptIter& pc)
             if (fValue)
                 popstack(stack);
             else
+            {
                 return set_error(serror, SCRIPT_ERR_VERIFY);
+            }
         }
         break;
 

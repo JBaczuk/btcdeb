@@ -456,7 +456,12 @@ int main(int argc, char* const* argv)
 #define fail(msg...) do { fprintf(stderr, msg); return 0; } while (0)
 
 int fn_step(const char* arg) {
-    if (env->done) fail("at end of script\n");
+    if (env->done) 
+    {
+        fprintf(stdout, "\033[0;32mScript returned successfully\033[0m\n");
+        return 0;
+        // fail("at end of script\n");
+    }
     if (!instance.step()) fail("error: %s\n", instance.error_string());
     print_dualstack();
     if (env->curr_op_seq < count) {

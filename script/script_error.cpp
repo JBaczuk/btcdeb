@@ -14,15 +14,16 @@ const char* ScriptErrorString(const ScriptError serror)
         case SCRIPT_ERR_EVAL_FALSE:
             return "Script evaluated without error but finished with a false/empty top stack element";
         case SCRIPT_ERR_VERIFY:
-            return "Script failed an OP_VERIFY operation";
+            // return "Script failed an OP_VERIFY operation";
         case SCRIPT_ERR_EQUALVERIFY:
-            return "Script failed an OP_EQUALVERIFY operation";
+            // return "Script failed an OP_EQUALVERIFY operation";
         case SCRIPT_ERR_CHECKMULTISIGVERIFY:
-            return "Script failed an OP_CHECKMULTISIGVERIFY operation";
+            // return "Script failed an OP_CHECKMULTISIGVERIFY operation";
         case SCRIPT_ERR_CHECKSIGVERIFY:
-            return "Script failed an OP_CHECKSIGVERIFY operation";
+            // return "Script failed an OP_CHECKSIGVERIFY operation";
         case SCRIPT_ERR_NUMEQUALVERIFY:
-            return "Script failed an OP_NUMEQUALVERIFY operation";
+            // return "Script failed an OP_NUMEQUALVERIFY operation";
+            return ("\033[0;31mScript verification failed\033[0m\n");
         case SCRIPT_ERR_SCRIPT_SIZE:
             return "Script is too big";
         case SCRIPT_ERR_PUSH_SIZE:

@@ -61,6 +61,7 @@ struct InterpreterEnv : public ScriptExecutionEnvironment {
     bool fRequireMinimal;
     bool operational;
     bool done;
+    bool success;
     InterpreterEnv(stack_type& stack_in, const CScript& script_in, unsigned int flags_in, const BaseSignatureChecker& checker_in, SigVersion sigversion_in, ScriptError* error_in = nullptr);
 
     // P2SH support
